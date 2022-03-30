@@ -1,0 +1,14 @@
+<h1>Edit Info:</h1>
+<form action="/Beers/Details/@(Model.BeerId)" method="post">
+  <label for="name">Beer Name</label>
+  <input id="name" name="name" type="text" value="@(Model.Name)">
+  <label for="brewery">Brewery Name</label>
+  <input id="brewery" name="brewery" type="text" value="@(Model.Brewery)">
+  <label for="style">Style</label>
+  <input id="style" name="style" type="text" value="@(Model.Style)">
+  <label for="abv">Beers Abv</label>
+  <input id="abv" name="abv" type="double" value="@(Model.Abv)">
+  <button type="submit">Change</button>
+</form>
+
+<a href="/Beers/Details/@(Model.BeerId)"><p>Return to Details</p></a>

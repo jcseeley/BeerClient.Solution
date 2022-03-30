@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>@Html.ActionLink("Beer Index", "Index", "Beers")</h3>
+<h3>@Html.ActionLink("Random Beer", "Random", "Beers")</h3>
+
+<ol>
+@foreach (Beer beer in Model)
+{
+    <ul>
+        <li>ID: @beer.BeerId</li>
+        <li>Name: @beer.Name</li>
+        <li>Brewery: @beer.Brewery</li>
+        <li>Style: @beer.Style</li>
+        <li>ABV: @beer.Abv</li>
+    </ul>
+    <a href="/Beers/Details/@(beer.BeerId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
